@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 #import <TargetConditionals.h>
+#import "GIDSignInButtonStyling.h"
 
 #if TARGET_OS_IOS || TARGET_OS_MACCATALYST
 
@@ -21,24 +22,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// The layout styles supported by the `GIDSignInButton`.
-///
-/// The minimum size of the button depends on the language used for text.
-/// The following dimensions (in points) fit for all languages:
-/// - kGIDSignInButtonStyleStandard: 230 x 48
-/// - kGIDSignInButtonStyleWide:     312 x 48
-/// - kGIDSignInButtonStyleIconOnly: 48 x 48 (no text, fixed size)
-typedef NS_ENUM(NSInteger, GIDSignInButtonStyle) {
-  kGIDSignInButtonStyleStandard = 0,
-  kGIDSignInButtonStyleWide = 1,
-  kGIDSignInButtonStyleIconOnly = 2
-};
-
-/// The color schemes supported by the `GIDSignInButton`.
-typedef NS_ENUM(NSInteger, GIDSignInButtonColorScheme) {
-  kGIDSignInButtonColorSchemeDark = 0,
-  kGIDSignInButtonColorSchemeLight = 1
-};
+// Forward declarations of enums
+typedef NS_ENUM(NSInteger, GIDSignInButtonStyle);
+typedef NS_ENUM(NSInteger, GIDSignInButtonColorScheme);
 
 /// This class provides the "Sign in with Google" button.
 ///

@@ -19,6 +19,7 @@
 #import <XCTest/XCTest.h>
 
 #import "GoogleSignIn/Sources/Public/GoogleSignIn/GIDSignInButton.h"
+#import "GoogleSignIn/Sources/Public/GoogleSignIn/GIDSignInButtonStyling.h"
 
 #ifdef SWIFT_PACKAGE
 @import OCMock;
