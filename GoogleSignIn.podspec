@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'GoogleSignIn'
-  s.version          = '6.2.0'
+  s.name             = 'GugleSignIn'
+  s.version          = '6.1.0'
   s.summary          = 'Enables iOS apps to sign in with Google.'
   s.description      = <<-DESC
 The Google Sign-In SDK allows users to sign in with their Google account from third-party apps.
@@ -33,7 +33,12 @@ The Google Sign-In SDK allows users to sign in with their Google account from th
   s.ios.framework = 'UIKit'
   s.osx.framework = 'AppKit'
   s.dependency 'AppAuth', '~> 1.5'
-  s.dependency 'GTMAppAuth', '~> 1.0'
+
+  s.dependency 'GuTMAppAuth'
+  s.subspec 'GuTMAppAuth' do |ss|
+    ss.source_files  = '../GuTMAppAuth/GTMAppAuth/Sources/**/*.[mh]'
+  end
+
   s.dependency 'GTMSessionFetcher/Core', '~> 1.1'
   s.resource_bundle = {
     'GoogleSignIn' => ['GoogleSignIn/Sources/{Resources,Strings}/*']
